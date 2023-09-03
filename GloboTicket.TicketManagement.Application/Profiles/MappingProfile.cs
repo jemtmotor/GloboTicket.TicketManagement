@@ -6,6 +6,7 @@ using GloboTicket.TicketManagement.Application.Features.Events.Commands.DeleteEv
 using GloboTicket.TicketManagement.Application.Features.Events.Commands.UpdateEvent;
 using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventDetail;
 using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventList;
+using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventsExport;
 using GloboTicket.TicketManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace GloboTicket.TicketManagement.Application.Profiles
             CreateMap<Event,CreateEventCommand>().ReverseMap();
             CreateMap<Event, UpdateEventCommand>().ReverseMap();
             CreateMap<Event, DeleteEventCommand>().ReverseMap();
+            CreateMap<Event, EventExportDto>();
         }
     }
 }
